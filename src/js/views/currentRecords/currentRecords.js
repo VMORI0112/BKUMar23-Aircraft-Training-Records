@@ -36,16 +36,16 @@ const CurrentRecords = () => {
 
             <label>Insert Your Employer ID</label>
             <input type="text" placeholder="Ex: 123343" onChange={(e) => setMyValue(e.target.value)} />
-            <button onClick={searchMyRecords}>Search my recrods</button>
+            <button onClick={searchMyRecords}>Search my records</button>
 
            
             <table class="table">
                 <thead>
                     <tr>
-                    <th scope="col">name</th>
-                    <th scope="col">employer ID</th>
-                    <th scope="col">course number</th>
-                    <th scope="col">Training Groupe</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Employer ID</th>
+                    <th scope="col">Course number</th>
+                    <th scope="col">Training Group</th>
                     <th scope="col">STA</th>
                     <th scope="col">DateAtten</th>
                     <th scope="col">ANP</th>
