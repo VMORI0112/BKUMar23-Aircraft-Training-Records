@@ -40,6 +40,7 @@ const AircraftTrainNavBar = () => {
                                     <Link className="dropdown-item" to="/training-records" >Current Training Records</Link>
                                     <Link className="dropdown-item" to="/expire-next-month" >Courses will expire next month</Link>
                                     <Link className="dropdown-item" to="/expire-between-dates" >Courses will expire between dates</Link>
+                                    <Link className="dropdown-item" to="/addRecord" >Add New Record</Link>
                                     <button 
                                         className="dropdown-item" 
                                         onClick={async () => {

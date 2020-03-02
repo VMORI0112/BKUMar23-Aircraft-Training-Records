@@ -11,7 +11,7 @@ const CurrentRecords = () => {
     const searchMyRecords = () => {
         console.log("dwwe", myValue)
 
-        fetch('https://3000-a8e8103b-38a9-441b-a8b2-d02d84f3caf2.ws-us02.gitpod.io/traindata', {
+        fetch('https://aircraft-record-backend.herokuapp.com/traindata', {
             method: 'POST',
             body:JSON.stringify({
                     "employerId": myValue
