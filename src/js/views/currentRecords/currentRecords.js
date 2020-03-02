@@ -44,8 +44,8 @@ const CurrentRecords = () => {
                     <tr>
                     <th scope="col">Name</th>
                     <th scope="col">Employer ID</th>
-                    <th scope="col">Course number</th>
-                    <th scope="col">Training Group</th>
+                    <th scope="col">Course Number</th>
+                    <th scope="col">Course Name</th>
                     <th scope="col">STA</th>
                     <th scope="col">DateAtten</th>
                     <th scope="col">ANP</th>
@@ -58,7 +58,7 @@ const CurrentRecords = () => {
                                     <td>{items.name}</td>
                                     <td>{items.employerId}</td>
                                     <td>{items.courseNumber}</td>
-                                    <td>{items.trainingGroup}</td>
+                                    <td>{items.descriptionName}</td>
                                     <td>{items.sta}</td>
                                     <td>{items.dateAtten}</td>
                                     <td>{items.anp}</td>

@@ -5,6 +5,7 @@ import swal from 'sweetalert';
 const AddRecord = () => {
 
     const [employerId,  setemployerId] = useState('');
+    const [courseNumber,  setcourseNumber] = useState('');
     const [hasRecu,  sethasRecu] = useState('');
     const [descriptionName,  setdescriptionName] = useState('');
     const [dateAtten,  setdateAtten] = useState('');
@@ -25,6 +26,7 @@ const AddRecord = () => {
     const FormHandler = () => { 
         let data = JSON.stringify({
             "employerId": employerId,
+            "courseNumber": courseNumber,
             "hasRecu": hasRecu,
             "descriptionName": descriptionName,
             "dateAtten": dateAtten,
