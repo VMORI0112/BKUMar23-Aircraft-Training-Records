@@ -92,6 +92,14 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
+                    placeholder="courseNumber" 
+                    value={courseNumber}
+                    onChange={(e) => setcourseNumber(e.target.value)}
+                />
+                 <br/>
+                <input 
+                    type="text" 
+                    className="form-control" 
                     placeholder="hasRecu" 
                     value={hasRecu}
                     onChange={(e) => sethasRecu(e.target.value)}
