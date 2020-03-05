@@ -29,7 +29,7 @@ const Home = () => {
                 <div className="row">
                     <div className="col-sm-12 col-md-6 col-lg-6">
                         <h2>About Us</h2>
-                        <p>For example, if you killed your grandfather, you'd cease to exist! The key to victory is discipline, and that means a well made bed. You will practice until you can make your bed in your sleep.</p>
+                        <p>We are a company that is using the last technology to  create web applications to use the internet, for the registration, maintenance and availability, of the all aircraft training records of the Mechanics and Technicians of your company or Aircraft Repair Station..</p>
                     </div>
                     <div className={["col-sm-12 col-md-6 col-lg-6", styles.worker1].join(' ')}>
                         <img src={worker1} alt="worker1" width="100%" />
