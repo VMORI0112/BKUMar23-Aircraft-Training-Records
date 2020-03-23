@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import styles from './addRecord.module.css';
+import styles from './updateRecord.module.css';
 import swal from 'sweetalert';
 
-const AddRecord = () => {
+const UpdateRecord = () => {
 
     const [employerId,  setemployerId] = useState('');
     const [courseNumber,  setcourseNumber] = useState('');
@@ -47,8 +47,8 @@ const AddRecord = () => {
 
         // console.log('hey', data)
 
-        fetch('https://aircraft-record-backend.herokuapp.com/addrecord', {
-            method: 'POST',
+        fetch('https://aircraft-record-backend.herokuapp.com/updaterecord', {
+            method: 'PUT',
             body: data,
             cors: 'no-cors',
             headers:{
@@ -57,11 +57,11 @@ const AddRecord = () => {
             }).then(res => res.json())
             .then(response => {   
                 if (response.added === "success") {
-                    swal("Record added with success!", "Welcome to Aircraft Training Records", "success", {
+                    swal("Record updated with success!", "Welcome to Aircraft Training Records", "success", {
                         button: "Okay",
                         })
                 } else {
-                    swal("Not Added!", "not good", "error", {
+                    swal("Not Updated!", "not good", "error", {
                         button: "Okay",
                         })
                 }
@@ -78,13 +78,12 @@ const AddRecord = () => {
 
     return (
         <div className={styles.main}>
-            <h1 className="text-center">Add New Record</h1>
+            <h1 className="text-center">Edit to Update  Record</h1>
 
             <div className="container">
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="employerId" 
                     value={employerId}
                     onChange={(e) => setemployerId(e.target.value)}
                 />
@@ -92,7 +91,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="courseNumber" 
                     value={courseNumber}
                     onChange={(e) => setcourseNumber(e.target.value)}
                 />
@@ -100,7 +98,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="hasRecu" 
                     value={hasRecu}
                     onChange={(e) => sethasRecu(e.target.value)}
                 />
@@ -108,7 +105,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="descriptionName" 
                     value={descriptionName}
                     onChange={(e) => setdescriptionName(e.target.value)}
                 />
@@ -116,7 +112,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="dateAtten" 
                     value={dateAtten}
                     onChange={(e) => setdateAtten(e.target.value)}
                 />
@@ -124,7 +119,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="ceCo" 
                     value={ceCo}
                     onChange={(e) => setceCo(e.target.value)}
                 />
@@ -132,7 +126,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="trainingGroup" 
                     value={trainingGroup}
                     onChange={(e) => settrainingGroup(e.target.value)}
                 />
@@ -140,7 +133,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="name" 
                     value={name}
                     onChange={(e) => setname(e.target.value)}
                 />
@@ -148,7 +140,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="hours" 
                     value={hours}
                     onChange={(e) => sethours(e.target.value)}
                 />
@@ -156,7 +147,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="days" 
                     value={days}
                     onChange={(e) => setdays(e.target.value)}
                 />
@@ -164,7 +154,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="sta" 
                     value={sta}
                     onChange={(e) => setsta(e.target.value)}
                 />
@@ -172,7 +161,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="anp" 
                     value={anp}
                     onChange={(e) => setanp(e.target.value)}
                 />
@@ -180,7 +168,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="insIni" 
                     value={insIni}
                     onChange={(e) => setinsIni(e.target.value)}
                 />
@@ -188,7 +175,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="recurrent" 
                     value={recurrent}
                     onChange={(e) => setrecurrent(e.target.value)}
                 />
@@ -196,7 +182,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="oneYearExpire" 
                     value={oneYearExpire}
                     onChange={(e) => setoneYearExpire(e.target.value)}
                 />
@@ -204,7 +189,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="twoYearExpire" 
                     value={twoYearExpire}
                     onChange={(e) => settwoYearExpire(e.target.value)}
                 />
@@ -212,7 +196,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="threeYearExpire" 
                     value={threeYearExpire}
                     onChange={(e) => setthreeYearExpire(e.target.value)}
                 />
@@ -220,7 +203,6 @@ const AddRecord = () => {
                 <input 
                     type="text" 
                     className="form-control" 
-                    placeholder="fourYearExpire" 
                     value={fourYearExpire}
                     onChange={(e) => setfourYearExpire(e.target.value)}
                 />
@@ -229,7 +211,7 @@ const AddRecord = () => {
                     className="form-control btn btn-primary"
                     onClick={FormHandler}
                 >
-                    Submit New Record
+                    Submit Update Record
                 </button>
                 <br/><br/>
             </div>
@@ -237,4 +219,4 @@ const AddRecord = () => {
     );
 };
 
-export default AddRecord;
+export default UpdateRecord;
