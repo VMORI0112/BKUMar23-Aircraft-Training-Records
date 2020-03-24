@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import styles from './currentRecords.module.css';
+import styles from './showToDelRecord.module.css';
 
-const CurrentRecords = () => {
+const ShowToDelRecord = () => {
 
     // const {trainData} = useContext(UserContext);
     const [myValue, setMyValue] = useState('');
-
+   
     const [newRecords, setNewRecords] = useState();
 
     const searchMyRecords = () => {
@@ -36,9 +36,9 @@ const CurrentRecords = () => {
 
             <label>Enter your Employer ID</label>
             <input type="text" placeholder="Example: 123343" onChange={(e) => setMyValue(e.target.value)} />
-            <button onClick={searchMyRecords}>Search my records</button>
-
+            <button onClick={searchMyRecords}>Search records for ID</button>
            
+                      
             <table class="table">
                 <thead>
                     <tr>
@@ -49,6 +49,7 @@ const CurrentRecords = () => {
                     <th scope="col">STA</th>
                     <th scope="col">DateAtten</th>
                     <th scope="col">ANP</th>
+                    <th scope="col">Delete:Yes</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -73,4 +74,4 @@ const CurrentRecords = () => {
     );
 };
 
-export default CurrentRecords;
+export default ShowToDelRecord;
