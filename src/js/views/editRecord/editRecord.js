@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import styles from './updateRecord.module.css';
+import styles from './editRecord.module.css';
 import swal from 'sweetalert';
 
-const UpdateRecord = () => {
+const EditRecord = () => {
 
     const [employerId,  setemployerId] = useState('');
     const [courseNumber,  setcourseNumber] = useState('');
@@ -47,7 +47,7 @@ const UpdateRecord = () => {
 
         // console.log('hey', data)
 
-        fetch('https://aircraft-record-backend.herokuapp.com/updaterecord', {
+        fetch('https://aircraft-record-backend.herokuapp.com/editrecord', {
             method: 'PUT',
             body: data,
             cors: 'no-cors',
@@ -219,4 +219,4 @@ const UpdateRecord = () => {
     );
 };
 
-export default UpdateRecord;
+export default EditRecord;
